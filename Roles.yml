@@ -1,0 +1,26 @@
+#1)create this file in role1 "installapache.yaml"
+---
+ - name: install apache2
+   apt: name=apache2 state=latest
+   
+   
+#2) create this file in role2  "installnginx.yaml"
+---
+ - name: install nginx
+   apt: name=nginx state=latest
+   
+   
+#3)now, include this file to main.yml in tasks
+# tasks file for Role1
+---
+ - include_tasks: installapache.yaml
+ 
+# 4)cd  /etc/ansible   -here create "mainplaybook1.yaml" file
+  - hosts: slave1
+   roles:
+     - ansible-new
+   become: true
+ - hosts: slave2
+   roles:
+     - ansible-new1
+   become: true

@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: placing file on 2 slave nodes 
+      copy:
+       dest: /home/ubuntu/1.txt
+       content:
+         this text has been added by custom script
