@@ -1,0 +1,24 @@
+- 
+  name: this is our first play.
+  hosts: webserver1
+  tasks: 
+    - 
+      name: 'installing'
+      apt: name="{{ item }}" state=present
+      with_items: 
+        - vsftpd
+        - tree
+        
+#2nd way
+-
+  name: this is our first play.
+  hosts: webserver1
+  vars:
+    pkg:
+     - vsftpd
+     - tree
+  tasks: 
+    - 
+      name: 'installing'
+      apt: name="{{ item }}" state=present
+      with_items: "{{ pkg }}"

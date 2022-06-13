@@ -17,9 +17,10 @@
  
 # 4)cd  /etc/ansible   -here create "mainplaybook1.yaml" file
   - hosts: slave1
-   roles:
+    become: true
+    roles:
      - ansible-new
-   become: true
+   
  - hosts: slave2
    roles:
      - ansible-new1
