@@ -1,0 +1,13 @@
+---
+- name: ansible task
+  hosts: localhost
+  become: true
+  tasks:
+    - name: install jenkins and java from script name master.sh
+      script: master.sh
+- name: ansible task
+  hosts: deploy
+  become: true
+  tasks:
+    - name: install java tomcat9 tomcat9-admin from script name worker.sh
+      script: worker1.sh
