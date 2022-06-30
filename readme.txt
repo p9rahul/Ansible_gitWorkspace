@@ -245,7 +245,10 @@ ansible-playbook -i enc_inven.txt playbook.yml --ask-vault-pass
     command: touch /tmp/csv_lookups.txt
 	
 16. dynamic inventory in ansible
-Mostly, any infrastructure can be managed with a custom inventory file, but there are many situations where more control is needed. Consider you are working with the 100 machines on AWS cloud. Now suppose you have to restart all these machines which will lead to change in its public addresses and hence we have to make changes in the host file as well. This is where Dynamic inventory comes very handy.
+Mostly, any infrastructure can be managed with a custom inventory file, but there are many situations where more control is needed.
+Consider you are working with the 100 machines on AWS cloud. Now suppose you have to restart all these machines
+which will lead to change in its public addresses and hence we have to make changes in the host file as well.
+This is where Dynamic inventory comes very handy.
 
 #practise this
 
