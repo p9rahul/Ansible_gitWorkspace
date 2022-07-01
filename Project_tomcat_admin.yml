@@ -12,7 +12,7 @@
     - name: install java tomcat9 tomcat9-admin from script name worker.sh
       script: worker1.sh
 
-
+# https://github.com/p9rahul/spring-boot-war-example
 #==================create master.sh==================
 
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
